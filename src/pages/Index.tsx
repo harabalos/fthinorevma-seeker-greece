@@ -30,11 +30,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
+      {/* Hero Section with Form */}
       <section className="relative py-20 lg:py-32 bg-gradient-hero overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8 animate-fade-in-up">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            {/* Left side - Text content */}
+            <div className="space-y-8 animate-fade-in-up lg:pt-8">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
                 Βρες φθηνότερο ρεύμα 
                 <span className="text-orange-200"> εύκολα & γρήγορα</span>
@@ -48,47 +49,27 @@ const Index = () => {
                   size="lg" 
                   variant="secondary"
                   className="shadow-orange-lg transition-spring hover:scale-105"
-                  onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
                 >
-                  Δωρεάν Ανάλυση <ArrowRight className="ml-2 w-5 h-5" />
+                  Μάθε Περισσότερα <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
                 <Button 
                   size="lg" 
                   variant="outline"
                   className="bg-white/20 border-white/30 text-white hover:bg-white/30"
-                  onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
+                  asChild
                 >
-                  Πώς Λειτουργεί
+                  <a href="tel:2111985861">
+                    Καλέστε: 211.1985.861
+                  </a>
                 </Button>
               </div>
             </div>
+            
+            {/* Right side - Contact Form */}
             <div className="relative animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              <img 
-                src={heroImage} 
-                alt="Εξοικονόμηση ρεύματος" 
-                className="w-full h-auto rounded-2xl shadow-orange-lg"
-              />
-              <div className="absolute -top-4 -right-4 bg-white rounded-full p-4 shadow-lg animate-bounce-soft">
-                <TrendingDown className="w-8 h-8 text-success" />
-              </div>
+              <ContactForm />
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Form Section */}
-      <section id="contact-form" className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 animate-fade-in-up">
-              Ξεκινήστε την Εξοικονόμηση Σήμερα
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-              Συμπληρώστε τα στοιχεία σας και θα σας καλέσουμε εντός 24 ωρών για δωρεάν ανάλυση
-            </p>
-          </div>
-          <div className="animate-scale-in" style={{ animationDelay: '0.2s' }}>
-            <ContactForm />
           </div>
         </div>
       </section>
