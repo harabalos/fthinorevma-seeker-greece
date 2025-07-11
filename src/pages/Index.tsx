@@ -3,32 +3,18 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import ThreeStepForm from '@/components/ThreeStepForm';
 import StatsSection from '@/components/StatsSection';
-import { 
-  Zap, 
-  Euro, 
-  Clock, 
-  Shield, 
-  Search, 
-  FileText, 
-  CheckCircle,
-  ArrowRight,
-  TrendingDown,
-  Users
-} from 'lucide-react';
-
+import { Zap, Euro, Clock, Shield, Search, FileText, CheckCircle, ArrowRight, TrendingDown, Users } from 'lucide-react';
 const Index = () => {
   useEffect(() => {
     document.title = 'Follow Up - Βρες Φθηνότερο Ρεύμα Εύκολα & Γρήγορα | Σύγκριση Παρόχων';
-    
+
     // Add meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Σύγκριση παρόχων ρεύματος στην Ελλάδα. Βρες το φθηνότερο πρόγραμμα ρεύματος για το σπίτι ή την επιχείρησή σου. Δωρεάν ανάλυση και άμεση εξυπηρέτηση.');
     }
   }, []);
-
-  return (
-    <div className="min-h-screen bg-gray-50">
+  return <div className="min-h-screen bg-gray-50">
       {/* Hero Section with Form */}
       <section className="relative py-16 lg:py-24 bg-white">
         <div className="container mx-auto px-4">
@@ -43,20 +29,13 @@ const Index = () => {
                 Συγκρίνουμε όλους τους παρόχους ενέργειας και βρίσκουμε την καλύτερη προσφορά για εσένα. Εξοικονόμησε χρήματα χωρίς κόπο!
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  size="lg" 
-                  className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-medium shadow-lg transition-all hover:scale-105"
-                  onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
-                >
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-medium shadow-lg transition-all hover:scale-105" onClick={() => document.getElementById('how-it-works')?.scrollIntoView({
+                behavior: 'smooth'
+              })}>
                   Ξεκίνα Τώρα
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  className="border-orange-500 text-orange-500 hover:bg-orange-50 px-8 py-4 rounded-lg font-medium"
-                  asChild
-                >
+                <Button size="lg" variant="outline" className="border-orange-500 text-orange-500 hover:bg-orange-50 px-8 py-4 rounded-lg font-medium" asChild>
                   <a href="tel:2111985861">
                     Μάθε Περισσότερα
                   </a>
@@ -87,7 +66,9 @@ const Index = () => {
             </div>
             
             {/* Right side - 3-Step Form */}
-            <div className="relative animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <div className="relative animate-fade-in-up" style={{
+            animationDelay: '0.2s'
+          }}>
               <ThreeStepForm />
             </div>
           </div>
@@ -101,7 +82,9 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 animate-fade-in-up">
               Γιατί να επιλέξεις το <span className="text-orange-500">Follow Up</span>;
             </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto animate-fade-in-up" style={{
+            animationDelay: '0.1s'
+          }}>
               Χιλιάδες πελάτες μας έχουν ήδη εξοικονομήσει χρήματα. Δες γιατί μας εμπιστεύονται.
             </p>
           </div>
@@ -119,7 +102,9 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center p-8 bg-white border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 animate-scale-in rounded-xl" style={{ animationDelay: '0.2s' }}>
+            <Card className="text-center p-8 bg-white border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 animate-scale-in rounded-xl" style={{
+            animationDelay: '0.2s'
+          }}>
               <CardContent className="space-y-6">
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto">
                   <Clock className="w-8 h-8 text-orange-500" />
@@ -131,7 +116,9 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center p-8 bg-white border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 animate-slide-in-right rounded-xl" style={{ animationDelay: '0.4s' }}>
+            <Card className="text-center p-8 bg-white border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 animate-slide-in-right rounded-xl" style={{
+            animationDelay: '0.4s'
+          }}>
               <CardContent className="space-y-6">
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto">
                   <Shield className="w-8 h-8 text-orange-500" />
@@ -226,7 +213,9 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 animate-fade-in-up">
               Πώς <span className="text-orange-500">λειτουργεί</span>;
             </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto animate-fade-in-up" style={{
+            animationDelay: '0.1s'
+          }}>
               Απλά 3 βήματα για να αρχίσεις να εξοικονομείς χρήματα από το ρεύμα σου
             </p>
           </div>
@@ -237,11 +226,9 @@ const Index = () => {
                 <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto border-4 border-white shadow-lg">
                   <Search className="w-10 h-10 text-orange-500" />
                 </div>
-                <div className="absolute -top-2 -right-2 w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg border-4 border-white">
-                  01
-                </div>
+                
                 {/* Connecting line */}
-                <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-orange-200" style={{ transform: 'translateX(-50%)' }} />
+                
               </div>
               <h3 className="text-xl font-semibold text-gray-900">Συγκρίνουμε Προσφορές</h3>
               <p className="text-gray-600 leading-relaxed">
@@ -249,16 +236,16 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="text-center space-y-6 animate-scale-in" style={{ animationDelay: '0.2s' }}>
+            <div className="text-center space-y-6 animate-scale-in" style={{
+            animationDelay: '0.2s'
+          }}>
               <div className="relative mb-8">
                 <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto border-4 border-white shadow-lg">
                   <CheckCircle className="w-10 h-10 text-orange-500" />
                 </div>
-                <div className="absolute -top-2 -right-2 w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg border-4 border-white">
-                  02
-                </div>
+                
                 {/* Connecting line */}
-                <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-orange-200" style={{ transform: 'translateX(-50%)' }} />
+                
               </div>
               <h3 className="text-xl font-semibold text-gray-900">Επιλέγεις την Καλύτερη</h3>
               <p className="text-gray-600 leading-relaxed">
@@ -266,14 +253,14 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="text-center space-y-6 animate-slide-in-right" style={{ animationDelay: '0.4s' }}>
+            <div className="text-center space-y-6 animate-slide-in-right" style={{
+            animationDelay: '0.4s'
+          }}>
               <div className="relative mb-8">
                 <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto border-4 border-white shadow-lg">
                   <Zap className="w-10 h-10 text-orange-500" />
                 </div>
-                <div className="absolute -top-2 -right-2 w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg border-4 border-white">
-                  03
-                </div>
+                
               </div>
               <h3 className="text-xl font-semibold text-gray-900">Αναλαμβάνουμε την Αλλαγή</h3>
               <p className="text-gray-600 leading-relaxed">
@@ -284,11 +271,7 @@ const Index = () => {
           
           {/* CTA Button */}
           <div className="text-center mt-12">
-            <Button 
-              size="lg" 
-              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-medium shadow-lg transition-all hover:scale-105"
-              asChild
-            >
+            <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-medium shadow-lg transition-all hover:scale-105" asChild>
               <a href="/how-it-works">
                 Μάθε Περισσότερα
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -328,11 +311,7 @@ const Index = () => {
                   </div>
                   
                   <div className="text-center">
-                    <Button 
-                      variant="outline"
-                      className="border-orange-500 text-orange-500 hover:bg-orange-50"
-                      asChild
-                    >
+                    <Button variant="outline" className="border-orange-500 text-orange-500 hover:bg-orange-50" asChild>
                       <a href="/faq">Δες όλες τις ερωτήσεις</a>
                     </Button>
                   </div>
@@ -342,8 +321,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
