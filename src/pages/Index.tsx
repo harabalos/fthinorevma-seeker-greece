@@ -23,7 +23,7 @@ const Index = () => {
           dangerouslySetInnerHTML={{
             __html: `
               <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.26/build/spline-viewer.js"></script>
-              <spline-viewer url="https://prod.spline.design/MJVI3-8NHJIyFJmu/scene.splinecode" style="width: 100%; height: 100%;"></spline-viewer>
+              <spline-viewer url="https://prod.spline.design/JiekTj8eevPEc4X8/scene.splinecode" style="width: 100%; height: 100%;"></spline-viewer>
             `
           }}
         />
