@@ -20,11 +20,11 @@ const Index = () => {
         {/* 3D Spline Background */}
         <div className="absolute inset-0 z-0">
           <div dangerouslySetInnerHTML={{
-            __html: `
+          __html: `
               <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.26/build/spline-viewer.js"></script>
               <spline-viewer url="https://prod.spline.design/MJVI3-8NHJIyFJmu/scene.splinecode" style="width: 100%; height: 100%;"></spline-viewer>
             `
-          }}></div>
+        }}></div>
         </div>
         
         {/* Content overlay */}
@@ -48,9 +48,7 @@ const Index = () => {
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                   <Button size="lg" variant="outline" className="border-orange-500 text-orange-500 hover:bg-orange-50 px-8 py-4 rounded-lg font-medium animate-smooth" asChild>
-                    <a href="tel:2111985861">
-                      Μάθε Περισσότερα
-                    </a>
+                    
                   </Button>
                 </div>
                 
