@@ -236,6 +236,83 @@ const HowItWorks = () => {
         </div>
       </section>
 
+      {/* Detailed Process Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
+              Πώς λειτουργεί η διαδικασία;
+            </h2>
+            
+            <Card className="border border-gray-100 shadow-lg rounded-xl">
+              <CardContent className="p-12">
+                <p className="text-xl text-gray-700 leading-relaxed mb-8 text-center">
+                  Η διαδικασία με την Follow Up είναι απλή, ξεκάθαρη και απόλυτα ανθρώπινη:
+                </p>
+                
+                <div className="space-y-8">
+                  <div className="flex items-start space-x-6">
+                    <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                      1
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                        Επικοινωνείς μαζί μας τηλεφωνικά ή μέσω της φόρμας ενδιαφέροντος.
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed">
+                        Μπορείς να μας καλέσεις οποιαδήποτε στιγμή ή να συμπληρώσεις τη φόρμα στον ιστότοπό μας για να ξεκινήσεις τη διαδικασία.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-6">
+                    <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                      2
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                        Ένας εξειδικευμένος σύμβουλος αναλύει τη σημερινή σου σύμβαση και τις ανάγκες σου.
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed">
+                        Ο σύμβουλός μας θα εξετάσει τον τρέχοντα λογαριασμό σου και θα κατανοήσει τις συνήθειες κατανάλωσής σου για να βρει την καλύτερη λύση.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-6">
+                    <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                      3
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                        Γίνεται σύγκριση όλων των ενεργών παρόχων και επιλέγεται η βέλτιστη λύση για σένα.
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed">
+                        Συγκρίνουμε όλες τις διαθέσιμες προσφορές από τους 17+ παρόχους και σου παρουσιάζουμε τις καλύτερες επιλογές με σαφή ανάλυση κόστους.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-6">
+                    <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                      4
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                        Σε καθοδηγούμε στη διαδικασία αλλαγής ή βελτίωσης της σύμβασής σου, χωρίς να χρειαστεί να κάνεις τίποτα.
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed">
+                        Αναλαμβάνουμε όλες τις διαδικασίες για εσένα - από την υποβολή αιτήσεων μέχρι την επικοινωνία με τους παρόχους. Εσύ απλά περιμένεις να δεις τη μείωση στον επόμενο λογαριασμό σου.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-gradient-hero">
         <div className="container mx-auto px-4 text-center">

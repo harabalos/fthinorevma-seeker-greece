@@ -146,6 +146,79 @@ const Index = () => {
         </div>
       </section>
 
+      {/* About Follow Up Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <Card className="border border-gray-100 shadow-lg rounded-xl overflow-hidden">
+              <CardContent className="p-12">
+                <div className="space-y-8">
+                  <p className="text-xl text-gray-700 leading-relaxed font-medium text-center">
+                    <strong>Η Follow Up είναι ο προσωπικός σου σύμβουλος στην ενέργεια</strong> — ένας αξιόπιστος συνεργάτης που φροντίζει να πληρώνεις μόνο ό,τι πραγματικά χρειάζεσαι για ρεύμα ή φυσικό αέριο.
+                  </p>
+                  
+                  <div className="space-y-6">
+                    <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">Με τη βοήθειά μας:</h3>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="flex items-start space-x-4">
+                        <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                          <TrendingDown className="w-5 h-5 text-orange-500" />
+                        </div>
+                        <div>
+                          <p className="text-gray-700 leading-relaxed">
+                            <strong>Μειώνεις άμεσα τον λογαριασμό σου</strong>, χωρίς κόπο.
+                          </p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start space-x-4">
+                        <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                          <Zap className="w-5 h-5 text-orange-500" />
+                        </div>
+                        <div>
+                          <p className="text-gray-700 leading-relaxed">
+                            <strong>Έχεις διαρκή ενημέρωση</strong> για κάθε νέα προσφορά ή αλλαγή στην αγορά.
+                          </p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start space-x-4">
+                        <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                          <Users className="w-5 h-5 text-orange-500" />
+                        </div>
+                        <div>
+                          <p className="text-gray-700 leading-relaxed">
+                            <strong>Έχεις προσωπικό ενεργειακό σύμβουλο</strong> που σε καθοδηγεί βήμα-βήμα, χωρίς πίεση ή ψιλά γράμματα.
+                          </p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start space-x-4">
+                        <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                          <Shield className="w-5 h-5 text-orange-500" />
+                        </div>
+                        <div>
+                          <p className="text-gray-700 leading-relaxed">
+                            <strong>Χτίζεις μια σχέση εμπιστοσύνης</strong>, όχι μια απλή συναλλαγή.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="text-center pt-6 border-t border-gray-200">
+                      <p className="text-lg text-gray-700 leading-relaxed">
+                        Και το σημαντικότερο; <strong className="text-orange-600">Όλα αυτά γίνονται δωρεάν</strong>, γιατί πιστεύουμε ότι η εξοικονόμηση ενέργειας είναι <strong className="text-orange-600">δικαίωμα, όχι προνόμιο</strong>.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* How it Works Section */}
       <section id="how-it-works" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -207,6 +280,20 @@ const Index = () => {
                 Κάνουμε όλες τις διαδικασίες για εσένα. Δεν διακόπτεται το ρεύμα και δεν χρειάζεται κανένας κόπος από εσένα.
               </p>
             </div>
+          </div>
+          
+          {/* CTA Button */}
+          <div className="text-center mt-12">
+            <Button 
+              size="lg" 
+              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-medium shadow-lg transition-all hover:scale-105"
+              asChild
+            >
+              <a href="/how-it-works">
+                Μάθε Περισσότερα
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+            </Button>
           </div>
         </div>
       </section>
