@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import ContactForm from '@/components/ContactForm';
+import ThreeStepForm from '@/components/ThreeStepForm';
 import StatsSection from '@/components/StatsSection';
 import { 
   Zap, 
@@ -15,7 +15,6 @@ import {
   TrendingDown,
   Users
 } from 'lucide-react';
-import heroImage from '@/assets/hero-electricity.jpg';
 
 const Index = () => {
   useEffect(() => {
@@ -29,99 +28,117 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section with Form */}
-      <section className="relative py-20 lg:py-32 bg-gradient-hero overflow-hidden">
+      <section className="relative py-16 lg:py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             {/* Left side - Text content */}
             <div className="space-y-8 animate-fade-in-up lg:pt-8">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                Βρες φθηνότερο ρεύμα 
-                <span className="text-orange-200"> εύκολα & γρήγορα</span>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                Βρες φθηνότερο 
+                <span className="text-orange-500"> ρεύμα</span> εύκολα & γρήγορα
               </h1>
-              <p className="text-xl text-orange-100 max-w-2xl">
-                Σύγκριση 17+ παρόχων ρεύματος στην Ελλάδα. Εξοικονόμησε έως και 40% στον λογαριασμό σου 
-                με τη δωρεάν ανάλυση μας.
+              <p className="text-xl text-gray-600 max-w-2xl leading-relaxed">
+                Συγκρίνουμε όλους τους παρόχους ενέργειας και βρίσκουμε την καλύτερη προσφορά για εσένα. Εξοικονόμησε χρήματα χωρίς κόπο!
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg" 
-                  variant="secondary"
-                  className="shadow-orange-lg transition-spring hover:scale-105"
+                  className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-medium shadow-lg transition-all hover:scale-105"
                   onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
                 >
-                  Μάθε Περισσότερα <ArrowRight className="ml-2 w-5 h-5" />
+                  Ξεκίνα Τώρα
+                  <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className="bg-white/20 border-white/30 text-white hover:bg-white/30"
+                  className="border-orange-500 text-orange-500 hover:bg-orange-50 px-8 py-4 rounded-lg font-medium"
                   asChild
                 >
                   <a href="tel:2111985861">
-                    Καλέστε: 211.1985.861
+                    Μάθε Περισσότερα
                   </a>
                 </Button>
               </div>
+              
+              {/* Benefits Icons */}
+              <div className="flex items-center gap-8 pt-8">
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+                    <Zap className="w-4 h-4 text-orange-500" />
+                  </div>
+                  <span className="text-sm text-gray-600">Δωρεάν σύγκριση</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+                    <Clock className="w-4 h-4 text-orange-500" />
+                  </div>
+                  <span className="text-sm text-gray-600">Γρήγορη διαδικασία</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+                    <Shield className="w-4 h-4 text-orange-500" />
+                  </div>
+                  <span className="text-sm text-gray-600">Έμπειρη υποστήριξη</span>
+                </div>
+              </div>
             </div>
             
-            {/* Right side - Contact Form */}
+            {/* Right side - 3-Step Form */}
             <div className="relative animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              <ContactForm />
+              <ThreeStepForm />
             </div>
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-gradient-section">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 animate-fade-in-up">
-              Γιατί να Επιλέξετε τη Follow Up;
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 animate-fade-in-up">
+              Γιατί να επιλέξεις το <span className="text-orange-500">Follow Up</span>;
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-              Η εμπειρία μας και οι συνεργασίες μας σας εγγυώνται τις καλύτερες τιμές
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+              Χιλιάδες πελάτες μας έχουν ήδη εξοικονομήσει χρήματα. Δες γιατί μας εμπιστεύονται.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center p-8 bg-gradient-card shadow-md hover:shadow-orange transition-all duration-300 animate-slide-in-left">
-              <CardContent className="space-y-4">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto shadow-orange">
-                  <Euro className="w-8 h-8 text-primary-foreground" />
+            <Card className="text-center p-8 bg-white border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 animate-slide-in-left rounded-xl">
+              <CardContent className="space-y-6">
+                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto">
+                  <Euro className="w-8 h-8 text-orange-500" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground">Εξοικονόμηση Χρημάτων</h3>
-                <p className="text-muted-foreground">
-                  Βρίσκουμε το φθηνότερο πρόγραμμα που ταιριάζει στις ανάγκες σας. 
-                  Εξοικονομήστε έως και 40% στον λογαριασμό σας.
+                <h3 className="text-xl font-semibold text-gray-900">Εξοικονόμηση Χρημάτων</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Βρίσκουμε τις καλύτερες τιμές στην αγορά και σε βοηθάμε να μειώσεις σημαντικά το κόστος του ρεύματός σου.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="text-center p-8 bg-gradient-card shadow-md hover:shadow-orange transition-all duration-300 animate-scale-in" style={{ animationDelay: '0.2s' }}>
-              <CardContent className="space-y-4">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto shadow-orange">
-                  <Clock className="w-8 h-8 text-primary-foreground" />
+            <Card className="text-center p-8 bg-white border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 animate-scale-in rounded-xl" style={{ animationDelay: '0.2s' }}>
+              <CardContent className="space-y-6">
+                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto">
+                  <Clock className="w-8 h-8 text-orange-500" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground">Ταχύτητα και Ευκολία</h3>
-                <p className="text-muted-foreground">
-                  Αναλαμβάνουμε εμείς όλη τη διαδικασία. Από την ανάλυση έως την αλλαγή παρόχου, 
-                  χωρίς κόπο από εσάς.
+                <h3 className="text-xl font-semibold text-gray-900">Γρήγορη Διαδικασία</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Η αλλαγή παρόχου γίνεται σε λίγα λεπτά. Εμείς αναλαμβάνουμε όλες τις διαδικασίες για εσένα.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="text-center p-8 bg-gradient-card shadow-md hover:shadow-orange transition-all duration-300 animate-slide-in-right" style={{ animationDelay: '0.4s' }}>
-              <CardContent className="space-y-4">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto shadow-orange">
-                  <Shield className="w-8 h-8 text-primary-foreground" />
+            <Card className="text-center p-8 bg-white border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 animate-slide-in-right rounded-xl" style={{ animationDelay: '0.4s' }}>
+              <CardContent className="space-y-6">
+                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto">
+                  <Shield className="w-8 h-8 text-orange-500" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground">Αξιοπιστία & Συνεργασίες</h3>
-                <p className="text-muted-foreground">
-                  Συνεργαζόμαστε με όλους τους μεγάλους παρόχους και έχουμε εξυπηρετήσει 
-                  χιλιάδες ικανοποιημένους πελάτες.
+                <h3 className="text-xl font-semibold text-gray-900">Αξιόπιστη Συμβουλή</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Έμπειρη ομάδα συμβούλων που γνωρίζει την αγορά ενέργειας και σε καθοδηγεί στην καλύτερη επιλογή.
                 </p>
               </CardContent>
             </Card>
@@ -130,63 +147,64 @@ const Index = () => {
       </section>
 
       {/* How it Works Section */}
-      <section id="how-it-works" className="py-16 bg-background">
+      <section id="how-it-works" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 animate-fade-in-up">
-              Πώς Λειτουργεί;
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 animate-fade-in-up">
+              Πώς <span className="text-orange-500">λειτουργεί</span>;
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-              Απλά 3 βήματα για να βρείτε το καλύτερο πρόγραμμα ρεύματος
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+              Απλά 3 βήματα για να αρχίσεις να εξοικονομείς χρήματα από το ρεύμα σου
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="text-center space-y-6 animate-slide-in-left">
-              <div className="relative">
-                <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto shadow-orange">
-                  <Search className="w-10 h-10 text-primary-foreground" />
+              <div className="relative mb-8">
+                <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto border-4 border-white shadow-lg">
+                  <Search className="w-10 h-10 text-orange-500" />
                 </div>
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-orange-200 rounded-full flex items-center justify-center text-primary font-bold">
-                  1
+                <div className="absolute -top-2 -right-2 w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg border-4 border-white">
+                  01
                 </div>
+                {/* Connecting line */}
+                <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-orange-200" style={{ transform: 'translateX(-50%)' }} />
               </div>
-              <h3 className="text-xl font-semibold text-foreground">Ανάλυση Αναγκών</h3>
-              <p className="text-muted-foreground">
-                Συλλέγουμε τα στοιχεία σας και αναλύουμε την τρέχουσα κατανάλωσή σας 
-                για να βρούμε το ιδανικό πρόγραμμα.
+              <h3 className="text-xl font-semibold text-gray-900">Συγκρίνουμε Προσφορές</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Αναλύουμε όλες τις διαθέσιμες προσφορές των παρόχων ενέργειας για να βρούμε την καλύτερη για εσένα.
               </p>
             </div>
 
             <div className="text-center space-y-6 animate-scale-in" style={{ animationDelay: '0.2s' }}>
-              <div className="relative">
-                <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto shadow-orange">
-                  <FileText className="w-10 h-10 text-primary-foreground" />
+              <div className="relative mb-8">
+                <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto border-4 border-white shadow-lg">
+                  <CheckCircle className="w-10 h-10 text-orange-500" />
                 </div>
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-orange-200 rounded-full flex items-center justify-center text-primary font-bold">
-                  2
+                <div className="absolute -top-2 -right-2 w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg border-4 border-white">
+                  02
                 </div>
+                {/* Connecting line */}
+                <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-orange-200" style={{ transform: 'translateX(-50%)' }} />
               </div>
-              <h3 className="text-xl font-semibold text-foreground">Σύγκριση Προσφορών</h3>
-              <p className="text-muted-foreground">
-                Συγκρίνουμε όλες τις διαθέσιμες προσφορές από 17+ παρόχους 
-                και σας παρουσιάζουμε τις καλύτερες επιλογές.
+              <h3 className="text-xl font-semibold text-gray-900">Επιλέγεις την Καλύτερη</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Σου παρουσιάζουμε τις top προσφορές με σαφή ανάλυση κόστους και οφελών. Εσύ επιλέγεις.
               </p>
             </div>
 
             <div className="text-center space-y-6 animate-slide-in-right" style={{ animationDelay: '0.4s' }}>
-              <div className="relative">
-                <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto shadow-orange">
-                  <CheckCircle className="w-10 h-10 text-primary-foreground" />
+              <div className="relative mb-8">
+                <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto border-4 border-white shadow-lg">
+                  <Zap className="w-10 h-10 text-orange-500" />
                 </div>
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-orange-200 rounded-full flex items-center justify-center text-primary font-bold">
-                  3
+                <div className="absolute -top-2 -right-2 w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg border-4 border-white">
+                  03
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-foreground">Αλλαγή Παρόχου</h3>
-              <p className="text-muted-foreground">
-                Αναλαμβάνουμε εμείς όλη τη διαδικασία αλλαγής, χωρίς διακοπή ρεύματος 
-                και χωρίς επιπλέον κόστος για εσάς.
+              <h3 className="text-xl font-semibold text-gray-900">Αναλαμβάνουμε την Αλλαγή</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Κάνουμε όλες τις διαδικασίες για εσένα. Δεν διακόπτεται το ρεύμα και δεν χρειάζεται κανένας κόπος από εσένα.
               </p>
             </div>
           </div>
@@ -196,38 +214,44 @@ const Index = () => {
       {/* Stats Section */}
       <StatsSection />
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-hero">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-3xl mx-auto space-y-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-white animate-fade-in-up">
-              Έτοιμοι να Ξεκινήσετε την Εξοικονόμηση;
+      {/* FAQ Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Συχνές <span className="text-orange-500">Ερωτήσεις</span>
             </h2>
-            <p className="text-xl text-orange-100 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-              Περισσότεροι από 2.150 Έλληνες έχουν εξοικονομήσει χρήματα με τη βοήθειά μας. 
-              Είστε οι επόμενοι;
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Βρες απαντήσεις στις πιο συχνές ερωτήσεις που μας κάνουν οι πελάτες μας
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-scale-in" style={{ animationDelay: '0.2s' }}>
-              <Button 
-                size="lg" 
-                variant="secondary"
-                className="shadow-orange-lg transition-spring hover:scale-105"
-                onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Ξεκινήστε Τώρα <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="bg-white/20 border-white/30 text-white hover:bg-white/30"
-                asChild
-              >
-                <a href="tel:2111985861">
-                  <Users className="mr-2 w-5 h-5" />
-                  Καλέστε: 211.1985.861
-                </a>
-              </Button>
-            </div>
+          </div>
+
+          <div className="max-w-3xl mx-auto">
+            <Card className="border border-gray-100 shadow-lg rounded-xl overflow-hidden">
+              <CardContent className="p-8">
+                <div className="space-y-6">
+                  <div className="border-b border-gray-100 pb-6">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">
+                      <ArrowRight className="w-5 h-5 text-orange-500 mr-2" />
+                      Είναι δωρεάν η υπηρεσία σας;
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed pl-7">
+                      Ναι, η υπηρεσία μας είναι εντελώς δωρεάν για τους καταναλωτές. Αμειβόμαστε από τους παρόχους ενέργειας όταν βρίσκουμε τον κατάλληλο πελάτη.
+                    </p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <Button 
+                      variant="outline"
+                      className="border-orange-500 text-orange-500 hover:bg-orange-50"
+                      asChild
+                    >
+                      <a href="/faq">Δες όλες τις ερωτήσεις</a>
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

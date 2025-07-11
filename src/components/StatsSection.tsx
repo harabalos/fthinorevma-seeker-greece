@@ -60,19 +60,14 @@ const StatItem = ({ icon, number, suffix = '', label, delay = 0 }: StatItemProps
   return (
     <div 
       ref={ref}
-      className={`text-center p-6 rounded-xl bg-gradient-card shadow-md transition-all duration-700 ${
+      className={`text-center p-8 rounded-xl bg-white border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-700 ${
         isVisible ? 'animate-scale-in' : 'opacity-0'
       }`}
     >
-      <div className="flex justify-center mb-4">
-        <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-orange">
-          {icon}
-        </div>
-      </div>
-      <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
+      <div className="text-5xl font-bold text-orange-500 mb-4">
         {count.toLocaleString()}{suffix}
       </div>
-      <div className="text-muted-foreground font-medium">
+      <div className="text-gray-600 font-medium">
         {label}
       </div>
     </div>
@@ -81,41 +76,41 @@ const StatItem = ({ icon, number, suffix = '', label, delay = 0 }: StatItemProps
 
 const StatsSection = () => {
   return (
-    <section className="py-16 bg-gradient-section">
+    <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Τα Νούμερά Μας Μιλούν
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Τα <span className="text-orange-500">Αποτελέσματά</span> μας
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Χιλιάδες Έλληνες εμπιστεύονται την Follow Up για να βρουν το καλύτερο πρόγραμμα ρεύματος
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            Οι αριθμοί που αποδεικνύουν την αξιοπιστία και την επιτυχία μας
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <StatItem
-            icon={<Building2 className="w-8 h-8 text-primary-foreground" />}
+            icon={<Building2 className="w-8 h-8 text-white" />}
             number={17}
             label="Πάροχοι Ρεύματος"
             delay={0}
           />
           <StatItem
-            icon={<FileText className="w-8 h-8 text-primary-foreground" />}
-            number={462}
+            icon={<FileText className="w-8 h-8 text-white" />}
+            number={431}
             suffix="+"
             label="Αναλύσεις Προσφορών"
             delay={200}
           />
           <StatItem
-            icon={<Phone className="w-8 h-8 text-primary-foreground" />}
-            number={2150}
+            icon={<Phone className="w-8 h-8 text-white" />}
+            number={1111}
             suffix="+"
             label="Κλήσεις Ενδιαφέροντος"
             delay={400}
           />
           <StatItem
-            icon={<Star className="w-8 h-8 text-primary-foreground" />}
-            number={94.6}
+            icon={<Star className="w-8 h-8 text-white" />}
+            number={33.1}
             suffix="%"
             label="Ικανοποιημένοι Πελάτες"
             delay={600}
