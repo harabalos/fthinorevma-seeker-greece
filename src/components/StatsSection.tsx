@@ -90,7 +90,7 @@ const StatsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <StatItem
             icon={<Building2 className="w-8 h-8 text-white" />}
-            number={17}
+            number={11}
             label="Πάροχοι Ρεύματος"
             delay={0}
           />
@@ -110,7 +110,7 @@ const StatsSection = () => {
           />
           <StatItem
             icon={<Star className="w-8 h-8 text-white" />}
-            number={33.1}
+            number={98.5}
             suffix="%"
             label="Ικανοποιημένοι Πελάτες"
             delay={600}
