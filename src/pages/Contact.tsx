@@ -1,56 +1,40 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
+import { Card, CardContent } from '@/components/ui/card';
+import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
+import ThreeStepForm from '@/components/ThreeStepForm';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
-  });
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const { toast } = useToast();
+  const formRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     document.title = 'Επικοινωνία - Καλέστε για Δωρεάν Ανάλυση Ρεύματος | Follow Up';
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Επικοινωνήστε με τη Follow Up για δωρεάν ανάλυση του λογαριασμού ρεύματος. Τηλέφωνο: 211.1985.861. Εξυπηρέτηση Δευτέρα-Παρασκευή 9:00-18:00.');
+      metaDescription.setAttribute('content', 'Επικοινωνήστε με τη Follow Up για δωρεάν ανάλυση του λογαριασμού ρεύματος. Τηλέφωνο: +30 6907230126. Εξυπηρέτηση Δευτέρα-Παρασκευή 9:00-18:00.');
     }
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!formData.name || !formData.email || !formData.phone || !formData.message) {
-      toast({
-        title: "Σφάλμα",
-        description: "Παρακαλώ συμπληρώστε όλα τα υποχρεωτικά πεδία",
-        variant: "destructive"
-      });
-      return;
+  const scrollToForm = () => {
+    if (formRef.current) {
+      formRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      
+      // Add pop-up animation
+      formRef.current.style.transform = 'scale(0.95)';
+      formRef.current.style.transition = 'transform 0.3s ease';
+      
+      setTimeout(() => {
+        if (formRef.current) {
+          formRef.current.style.transform = 'scale(1.02)';
+          setTimeout(() => {
+            if (formRef.current) {
+              formRef.current.style.transform = 'scale(1)';
+            }
+          }, 150);
+        }
+      }, 100);
     }
-
-    // Simulate form submission
-    console.log('Contact form submitted:', formData);
-    setIsSubmitted(true);
-    
-    toast({
-      title: "Επιτυχής αποστολή!",
-      description: "Θα σας απαντήσουμε το συντομότερο δυνατό",
-    });
-  };
-
-  const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
   };
 
   return (
@@ -93,10 +77,10 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold text-foreground">Τηλέφωνο</h3>
                         <a 
-                          href="tel:2111985861" 
+                          href="tel:+306907230126" 
                           className="text-primary hover:text-primary-dark transition-colors text-lg font-medium"
                         >
-                          211.1985.861
+                          +30 6907230126
                         </a>
                       </div>
                     </div>
@@ -159,111 +143,8 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <div>
-              {isSubmitted ? (
-                <Card className="bg-gradient-card shadow-orange">
-                  <CardContent className="p-8">
-                    <div className="text-center space-y-4">
-                      <CheckCircle className="w-16 h-16 text-success mx-auto" />
-                      <h3 className="text-2xl font-semibold text-foreground">Ευχαριστούμε!</h3>
-                      <p className="text-muted-foreground text-lg">
-                        Λάβαμε το μήνυμά σας και θα σας απαντήσουμε το συντομότερο δυνατό.
-                      </p>
-                      <div className="pt-4">
-                        <Button 
-                          onClick={() => setIsSubmitted(false)}
-                          variant="outline"
-                        >
-                          Αποστολή Νέου Μηνύματος
-                        </Button>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ) : (
-                <Card className="bg-gradient-card shadow-orange">
-                  <CardHeader>
-                    <CardTitle className="text-2xl font-bold text-foreground">
-                      Στείλτε μας Μήνυμα
-                    </CardTitle>
-                    <CardDescription>
-                      Συμπληρώστε τη φόρμα και θα σας απαντήσουμε εντός 24 ωρών
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div className="space-y-2">
-                          <Label htmlFor="name">Όνομα *</Label>
-                          <Input
-                            id="name"
-                            type="text"
-                            placeholder="Το όνομά σας"
-                            value={formData.name}
-                            onChange={(e) => handleInputChange('name', e.target.value)}
-                            required
-                          />
-                        </div>
-                        <div className="space-y-2">
-                          <Label htmlFor="phone">Τηλέφωνο *</Label>
-                          <Input
-                            id="phone"
-                            type="tel"
-                            placeholder="69xxxxxxxx"
-                            value={formData.phone}
-                            onChange={(e) => handleInputChange('phone', e.target.value)}
-                            required
-                          />
-                        </div>
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="email">Email *</Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          placeholder="email@example.com"
-                          value={formData.email}
-                          onChange={(e) => handleInputChange('email', e.target.value)}
-                          required
-                        />
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="subject">Θέμα</Label>
-                        <Input
-                          id="subject"
-                          type="text"
-                          placeholder="Θέμα του μηνύματος"
-                          value={formData.subject}
-                          onChange={(e) => handleInputChange('subject', e.target.value)}
-                        />
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="message">Μήνυμα *</Label>
-                        <Textarea
-                          id="message"
-                          placeholder="Γράψτε το μήνυμά σας εδώ..."
-                          value={formData.message}
-                          onChange={(e) => handleInputChange('message', e.target.value)}
-                          rows={5}
-                          required
-                        />
-                      </div>
-
-                      <Button type="submit" className="w-full shadow-orange">
-                        <Send className="mr-2 w-4 h-4" />
-                        Αποστολή Μηνύματος
-                      </Button>
-
-                      <p className="text-xs text-muted-foreground text-center">
-                        * Υποχρεωτικά πεδία
-                      </p>
-                    </form>
-                  </CardContent>
-                </Card>
-              )}
+            <div ref={formRef} className="transition-transform duration-300">
+              <ThreeStepForm />
             </div>
           </div>
         </div>
@@ -292,9 +173,9 @@ const Contact = () => {
                   Καλέστε τώρα και μιλήστε απευθείας με έναν ειδικό μας
                 </p>
                 <Button size="lg" asChild className="shadow-orange">
-                  <a href="tel:2111985861">
+                  <a href="tel:+306907230126">
                     <Phone className="mr-2 w-5 h-5" />
-                    211.1985.861
+                    +30 6907230126
                   </a>
                 </Button>
               </CardContent>
@@ -309,10 +190,8 @@ const Contact = () => {
                 <p className="text-muted-foreground mb-6">
                   Συμπληρώστε τη φόρμα και θα σας καλέσουμε εμείς
                 </p>
-                <Button size="lg" variant="outline" asChild>
-                  <a href="/#contact-form">
-                    Συμπληρώστε Φόρμα
-                  </a>
+                <Button size="lg" variant="outline" onClick={scrollToForm}>
+                  Συμπληρώστε τη φόρμα
                 </Button>
               </CardContent>
             </Card>

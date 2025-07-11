@@ -18,14 +18,15 @@ const Index = () => {
       {/* Hero Section with Form */}
       <section className="relative py-16 lg:py-24 bg-white overflow-hidden">
         {/* 3D Spline Background */}
-        <div className="absolute inset-0 z-0">
-          <div dangerouslySetInnerHTML={{
-          __html: `
+        <div 
+          className="absolute inset-0 z-0"
+          dangerouslySetInnerHTML={{
+            __html: `
               <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.26/build/spline-viewer.js"></script>
               <spline-viewer url="https://prod.spline.design/MJVI3-8NHJIyFJmu/scene.splinecode" style="width: 100%; height: 100%;"></spline-viewer>
             `
-        }}></div>
-        </div>
+          }}
+        />
         
         {/* Content overlay */}
         <div className="relative z-10 bg-white/80 backdrop-blur-sm">
