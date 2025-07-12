@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -42,11 +43,11 @@ const Index = () => {
                   Συγκρίνουμε όλους τους παρόχους ενέργειας και βρίσκουμε την καλύτερη προσφορά για εσένα. Εξοικονόμησε χρήματα χωρίς κόπο!
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-medium shadow-lg transition-all hover:scale-105 animate-smooth" onClick={() => document.getElementById('how-it-works')?.scrollIntoView({
-                  behavior: 'smooth'
-                })}>
-                    Ξεκίνα Τώρα
-                    <ArrowRight className="ml-2 w-5 h-5" />
+                  <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-medium shadow-lg transition-all hover:scale-105 animate-smooth" asChild>
+                    <a href="/contact">
+                      Ξεκίνα Τώρα
+                      <ArrowRight className="ml-2 w-5 h-5" />
+                    </a>
                   </Button>
                   <Button size="lg" variant="outline" className="border-orange-500 text-orange-500 hover:bg-orange-50 px-8 py-4 rounded-lg font-medium animate-smooth" asChild>
                     

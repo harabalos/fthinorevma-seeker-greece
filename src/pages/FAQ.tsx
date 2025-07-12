@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { 
@@ -160,9 +161,9 @@ const FAQ = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" asChild className="shadow-orange">
-                  <a href="tel:2111985861">
+                  <a href="tel:+306907230126">
                     <Phone className="mr-2 w-5 h-5" />
-                    Καλέστε: 211.1985.861
+                    Καλέστε: +30 6907230126
                   </a>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
@@ -192,7 +193,7 @@ const FAQ = () => {
               className="shadow-orange-lg transition-spring hover:scale-105"
               asChild
             >
-              <a href="/#contact-form">
+              <a href="/contact">
                 Δωρεάν Ανάλυση Τώρα <ArrowRight className="ml-2 w-5 h-5" />
               </a>
             </Button>
