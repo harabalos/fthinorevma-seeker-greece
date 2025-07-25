@@ -65,7 +65,7 @@ const Navigation = () => {
               <Phone className="w-4 h-4" />
               <span className="font-medium">+30 6907230126</span>
             </a>
-            <Button asChild size="sm" variant="outline" className="border-white text-white hover:bg-dark-blue hover:border-dark-blue">
+            <Button asChild size="sm" variant="outline" className="border-white text-primary hover:bg-dark-blue hover:border-dark-blue hover:text-white">
               <Link to="/contact">Δωρεάν Ανάλυση</Link>
             </Button>
           </div>
