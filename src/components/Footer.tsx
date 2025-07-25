@@ -80,7 +80,17 @@ const Footer = () => {
 
         <div className="border-t border-border mt-8 pt-8 flex justify-between items-center">
           <p className="text-muted-foreground">&copy; 2024 Follow Up. Όλα τα δικαιώματα διατηρούνται.</p>
-          <p className="text-muted-foreground text-sm">Powered by amox.gr</p>
+          <p className="text-muted-foreground text-sm">
+            Powered by{" "}
+            <a 
+              href="https://amox.gr" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:text-primary-dark transition-colors"
+            >
+              amox.gr
+            </a>
+          </p>
         </div>
       </div>
     </footer>
