@@ -1,254 +1,121 @@
-import { useEffect } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Shield, Lock, Eye, UserCheck, FileText, Phone } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useEffect } from "react";
+import { Card } from "@/components/ui/card";
 
 const Privacy = () => {
   useEffect(() => {
-    document.title = 'Πολιτική Απορρήτου - Προστασία Προσωπικών Δεδομένων | Follow Up';
-    
+    document.title = "Πολιτική Απορρήτου | Follow Up";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Πολιτική Απορρήτου της Follow Up. Μάθετε πώς προστατεύουμε και χειριζόμαστε τα προσωπικά σας δεδομένα σύμφωνα με τον GDPR.');
+      metaDescription.setAttribute('content', 'Η πολιτική απορρήτου της Follow Up - Πώς προστατεύουμε και διαχειριζόμαστε τα προσωπικά σας δεδομένα.');
     }
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero">
-        <div className="container mx-auto px-4 text-center">
-          <Shield className="w-16 h-16 text-orange-200 mx-auto mb-6" />
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Πολιτική Απορρήτου
-          </h1>
-          <p className="text-xl text-orange-100 max-w-3xl mx-auto">
-            Η προστασία των προσωπικών σας δεδομένων είναι προτεραιότητά μας. 
-            Διαβάστε πώς χειριζόμαστε τις πληροφορίες σας.
-          </p>
+      <section className="bg-gradient-to-r from-primary to-primary-dark text-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Πολιτική Απορρήτου</h1>
+            <p className="text-xl opacity-90">
+              Η προστασία των προσωπικών σας δεδομένων είναι πολύ σημαντική για εμάς. Στην Follow Up, δεσμευόμαστε να διαχειριζόμαστε υπεύθυνα και με σεβασμό τις πληροφορίες που μας παρέχετε.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Content */}
-      <section className="py-16 bg-background">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-8">
             
-            {/* Last Updated */}
-            <Card className="bg-gradient-card">
-              <CardContent className="p-6">
-                <p className="text-muted-foreground">
-                  <strong>Τελευταία ενημέρωση:</strong> Ιανουάριος 2024
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Introduction */}
-            <Card className="bg-gradient-card shadow-md">
-              <CardHeader>
-                <CardTitle className="flex items-center text-2xl">
-                  <FileText className="w-6 h-6 text-primary mr-3" />
-                  Εισαγωγή
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground leading-relaxed">
-                  Η Follow Up δεσμεύεται να προστατεύει και να σέβεται την ιδιωτικότητά σας. 
-                  Αυτή η Πολιτική Απορρήτου εξηγεί πώς συλλέγουμε, χρησιμοποιούμε, αποκαλύπτουμε 
-                  και προστατεύουμε τις πληροφορίες σας όταν χρησιμοποιείτε τις υπηρεσίες μας.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Η πολιτική αυτή συμμορφώνεται με τον Γενικό Κανονισμό Προστασίας Δεδομένων (GDPR) 
-                  και την ελληνική νομοθεσία για την προστασία προσωπικών δεδομένων.
-                </p>
-              </CardContent>
-            </Card>
-
             {/* Data Collection */}
-            <Card className="bg-gradient-card shadow-md">
-              <CardHeader>
-                <CardTitle className="flex items-center text-2xl">
-                  <UserCheck className="w-6 h-6 text-primary mr-3" />
-                  Πληροφορίες που Συλλέγουμε
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <h3 className="text-lg font-semibold text-foreground">Προσωπικά Δεδομένα</h3>
-                <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
-                  <li>Όνομα και στοιχεία επικοινωνίας (τηλέφωνο, email)</li>
-                  <li>Διεύθυνση κατοικίας ή επιχείρησης</li>
-                  <li>Στοιχεία παροχής ρεύματος (τρέχων πάροχος, κατανάλωση)</li>
-                  <li>Αριθμός Φορολογικού Μητρώου (ΑΦΜ) για τη σύναψη συμβολαίου</li>
+            <Card className="p-8">
+              <h2 className="text-2xl font-bold mb-4 text-gray-900">Ποια δεδομένα συλλέγουμε</h2>
+              <div className="space-y-4 text-gray-700">
+                <p>Μέσω της φόρμας επικοινωνίας που υπάρχει στον ιστότοπό μας, ενδέχεται να συλλέξουμε τα παρακάτω στοιχεία:</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Ονοματεπώνυμο (αν συμπληρωθεί)</li>
+                  <li>Διεύθυνση email</li>
+                  <li>Αριθμός τηλεφώνου (αν υπάρχει σχετικό πεδίο)</li>
+                  <li>Ελεύθερο περιεχόμενο μηνύματος</li>
                 </ul>
-
-                <h3 className="text-lg font-semibold text-foreground mt-6">Τεχνικά Δεδομένα</h3>
-                <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
-                  <li>Διεύθυνση IP και στοιχεία περιήγησης</li>
-                  <li>Cookies και παρόμοιες τεχνολογίες</li>
-                  <li>Πληροφορίες συσκευής και προγράμματος περιήγησης</li>
-                </ul>
-              </CardContent>
+              </div>
             </Card>
 
-            {/* Data Usage */}
-            <Card className="bg-gradient-card shadow-md">
-              <CardHeader>
-                <CardTitle className="flex items-center text-2xl">
-                  <Eye className="w-6 h-6 text-primary mr-3" />
-                  Πώς Χρησιμοποιούμε τα Δεδομένα
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground leading-relaxed">
-                  Χρησιμοποιούμε τα προσωπικά σας δεδομένα για τους ακόλουθους σκοπούς:
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
-                  <li>Παροχή υπηρεσιών σύγκρισης και αλλαγής παρόχου ρεύματος</li>
-                  <li>Επικοινωνία μαζί σας για τη διαδικασία αλλαγής</li>
-                  <li>Ανάλυση της κατανάλωσής σας και παροχή εξατομικευμένων προτάσεων</li>
-                  <li>Βελτίωση των υπηρεσιών μας</li>
-                  <li>Συμμόρφωση με νομικές υποχρεώσεις</li>
+            {/* Why We Collect */}
+            <Card className="p-8">
+              <h2 className="text-2xl font-bold mb-4 text-gray-900">Γιατί τα συλλέγουμε</h2>
+              <div className="space-y-4 text-gray-700">
+                <p>Τα δεδομένα που συλλέγονται χρησιμοποιούνται αποκλειστικά για:</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Την απάντηση στο αίτημα ή την ερώτησή σας</li>
+                  <li>Την παροχή των υπηρεσιών μας</li>
+                  <li>Την επικοινωνία μαζί σας εφόσον απαιτείται</li>
                 </ul>
-              </CardContent>
+                <p className="mt-4">
+                  Δεν χρησιμοποιούμε τα προσωπικά σας δεδομένα για διαφημιστικούς σκοπούς ή εμπορικές προωθήσεις χωρίς τη ρητή σας συγκατάθεση.
+                </p>
+              </div>
+            </Card>
+
+            {/* How We Manage */}
+            <Card className="p-8">
+              <h2 className="text-2xl font-bold mb-4 text-gray-900">Πώς τα διαχειριζόμαστε</h2>
+              <div className="space-y-4 text-gray-700">
+                <p>
+                  Τα στοιχεία που υποβάλλονται μέσω της φόρμας αποστέλλονται και αποθηκεύονται με ασφάλεια μέσω της υπηρεσίας Formspree. Μπορείτε να δείτε την πολιτική απορρήτου του Formspree εδώ:
+                </p>
+                <p>
+                  👉 <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                    https://formspree.io/legal/privacy-policy
+                  </a>
+                </p>
+              </div>
+            </Card>
+
+            {/* Data Retention */}
+            <Card className="p-8">
+              <h2 className="text-2xl font-bold mb-4 text-gray-900">Πόσο διατηρούμε τα δεδομένα σας</h2>
+              <p className="text-gray-700 leading-relaxed">
+                Τα δεδομένα διατηρούνται μόνο για όσο είναι απαραίτητο για την εξυπηρέτηση του σκοπού για τον οποίο συλλέχθηκαν ή σύμφωνα με τις υποχρεώσεις μας βάσει νόμου.
+              </p>
             </Card>
 
             {/* Data Sharing */}
-            <Card className="bg-gradient-card shadow-md">
-              <CardHeader>
-                <CardTitle className="flex items-center text-2xl">
-                  <Lock className="w-6 h-6 text-primary mr-3" />
-                  Κοινοποίηση Δεδομένων
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground leading-relaxed">
-                  Κοινοποιούμε τα προσωπικά σας δεδομένα μόνο στις ακόλουθες περιπτώσεις:
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
-                  <li>Στον πάροχο ρεύματος που επιλέγετε για τη σύναψη συμβολαίου</li>
-                  <li>Σε νομικά εξουσιοδοτημένους συνεργάτες που μας βοηθούν στην παροχή υπηρεσιών</li>
-                  <li>Όταν απαιτείται από τον νόμο ή δικαστική απόφαση</li>
-                  <li>Με τη ρητή συναίνεσή σας</li>
-                </ul>
-                <div className="bg-primary-light p-4 rounded-lg mt-4">
-                  <p className="text-primary-dark font-medium">
-                    Δεν πουλάμε ποτέ τα προσωπικά σας δεδομένα σε τρίτους για εμπορικούς σκοπούς.
-                  </p>
-                </div>
-              </CardContent>
+            <Card className="p-8">
+              <h2 className="text-2xl font-bold mb-4 text-gray-900">Με ποιον τα μοιραζόμαστε</h2>
+              <p className="text-gray-700 leading-relaxed">
+                Δεν κοινοποιούμε τα προσωπικά σας δεδομένα σε τρίτους. Εξαίρεση αποτελεί η χρήση του Formspree για την υποβολή και αποθήκευση των αιτημάτων σας.
+              </p>
             </Card>
 
-            {/* Data Security */}
-            <Card className="bg-gradient-card shadow-md">
-              <CardHeader>
-                <CardTitle className="flex items-center text-2xl">
-                  <Shield className="w-6 h-6 text-primary mr-3" />
-                  Ασφάλεια Δεδομένων
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground leading-relaxed">
-                  Λαμβάνουμε κατάλληλα τεχνικά και οργανωτικά μέτρα για να προστατεύσουμε 
-                  τα προσωπικά σας δεδομένα από:
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
-                  <li>Μη εξουσιοδοτημένη πρόσβαση</li>
-                  <li>Αλλοίωση ή καταστροφή</li>
-                  <li>Απώλεια ή κακή χρήση</li>
+            {/* Your Rights */}
+            <Card className="p-8">
+              <h2 className="text-2xl font-bold mb-4 text-gray-900">Τα δικαιώματά σας</h2>
+              <div className="space-y-4 text-gray-700">
+                <p>Έχετε δικαίωμα:</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Πρόσβασης στα προσωπικά σας δεδομένα</li>
+                  <li>Διόρθωσης ή διαγραφής αυτών</li>
+                  <li>Περιορισμού ή εναντίωσης στην επεξεργασία</li>
+                  <li>Φορητότητας των δεδομένων σας</li>
                 </ul>
-                <p className="text-muted-foreground leading-relaxed">
-                  Χρησιμοποιούμε κρυπτογράφηση SSL, ασφαλείς servers και περιοδικές 
-                  ελέγχους ασφαλείας για τη διασφάλιση των δεδομένων σας.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* User Rights */}
-            <Card className="bg-gradient-card shadow-md">
-              <CardHeader>
-                <CardTitle className="flex items-center text-2xl">
-                  <UserCheck className="w-6 h-6 text-primary mr-3" />
-                  Τα Δικαιώματά Σας
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground leading-relaxed">
-                  Σύμφωνα με τον GDPR, έχετε τα ακόλουθα δικαιώματα:
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
-                  <li><strong>Πρόσβαση:</strong> Δικαίωμα πληροφόρησης για τα δεδομένα που επεξεργαζόμαστε</li>
-                  <li><strong>Διόρθωση:</strong> Δικαίωμα διόρθωσης ανακριβών δεδομένων</li>
-                  <li><strong>Διαγραφή:</strong> Δικαίωμα διαγραφής των δεδομένων σας</li>
-                  <li><strong>Περιορισμός:</strong> Δικαίωμα περιορισμού της επεξεργασίας</li>
-                  <li><strong>Φορητότητα:</strong> Δικαίωμα μεταφοράς των δεδομένων σας</li>
-                  <li><strong>Αντίρρηση:</strong> Δικαίωμα αντίρρησης στην επεξεργασία</li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            {/* Cookies */}
-            <Card className="bg-gradient-card shadow-md">
-              <CardHeader>
-                <CardTitle className="flex items-center text-2xl">
-                  <Eye className="w-6 h-6 text-primary mr-3" />
-                  Cookies και Παρακολούθηση
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground leading-relaxed">
-                  Χρησιμοποιούμε cookies για:
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
-                  <li>Βελτίωση της εμπειρίας χρήσης</li>
-                  <li>Ανάλυση της κίνησης στον ιστότοπο</li>
-                  <li>Προσωποποίηση περιεχομένου</li>
-                </ul>
-                <p className="text-muted-foreground leading-relaxed">
-                  Μπορείτε να διαχειριστείτε τις προτιμήσεις cookies από τις ρυθμίσεις 
-                  του προγράμματος περιήγησής σας.
-                </p>
-              </CardContent>
+              </div>
             </Card>
 
             {/* Contact */}
-            <Card className="bg-gradient-card shadow-orange">
-              <CardHeader>
-                <CardTitle className="flex items-center text-2xl">
-                  <Phone className="w-6 h-6 text-primary mr-3" />
-                  Επικοινωνία για Θέματα Προστασίας Δεδομένων
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground leading-relaxed">
-                  Για οποιαδήποτε ερώτηση σχετικά με την επεξεργασία των προσωπικών σας δεδομένων 
-                  ή για να ασκήσετε τα δικαιώματά σας, επικοινωνήστε μαζί μας:
-                </p>
-                <div className="space-y-2 text-muted-foreground">
-                  <p><strong>Τηλέφωνο:</strong> 211.1985.861</p>
-                  <p><strong>Email:</strong> privacy@followup.gr</p>
-                  <p><strong>Διεύθυνση:</strong> Αθήνα, Ελλάδα</p>
+            <Card className="p-8">
+              <h2 className="text-2xl font-bold mb-4 text-gray-900">Επικοινωνία</h2>
+              <div className="space-y-4 text-gray-700">
+                <p>Για οποιοδήποτε αίτημα σχετικά με τα προσωπικά σας δεδομένα, μπορείτε να επικοινωνήσετε μαζί μας στο:</p>
+                <div className="space-y-2">
+                  <p>📧 <strong>Email:</strong> info@followup.gr</p>
+                  <p>📞 <strong>Τηλέφωνο:</strong> +30 6907230126</p>
                 </div>
-                <div className="pt-4">
-                  <Button asChild>
-                    <a href="/contact">Επικοινωνήστε Μαζί Μας</a>
-                  </Button>
-                </div>
-              </CardContent>
+              </div>
             </Card>
 
-            {/* Changes */}
-            <Card className="bg-gradient-card shadow-md">
-              <CardHeader>
-                <CardTitle className="text-xl">Αλλαγές στην Πολιτική</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
-                  Διατηρούμε το δικαίωμα να τροποποιήσουμε αυτή την Πολιτική Απορρήτου. 
-                  Οι αλλαγές θα δημοσιεύονται σε αυτή τη σελίδα και θα σας ενημερώνουμε 
-                  για σημαντικές μεταβολές.
-                </p>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
