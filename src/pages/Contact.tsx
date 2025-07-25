@@ -45,7 +45,7 @@ const Contact = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in-up">
             Επικοινωνήστε Μαζί Μας
           </h1>
-          <p className="text-xl text-orange-100 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+          <p className="text-xl text-white/90 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
             Είμαστε εδώ για να σας βοηθήσουμε να βρείτε το καλύτερο πρόγραμμα ρεύματος. 
             Καλέστε τώρα για δωρεάν ανάλυση!
           </p>
@@ -68,10 +68,10 @@ const Contact = () => {
               </div>
 
               <div className="space-y-6">
-                <Card className="bg-gradient-card shadow-md hover:shadow-orange transition-all duration-300">
+                <Card className="bg-gradient-card shadow-md hover:shadow-blue transition-all duration-300">
                   <CardContent className="p-6">
                     <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-orange">
+                      <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-blue">
                         <Phone className="w-6 h-6 text-primary-foreground" />
                       </div>
                       <div>
@@ -87,10 +87,10 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="bg-gradient-card shadow-md hover:shadow-orange transition-all duration-300">
+                <Card className="bg-gradient-card shadow-md hover:shadow-blue transition-all duration-300">
                   <CardContent className="p-6">
                     <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-orange">
+                      <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-blue">
                         <Mail className="w-6 h-6 text-primary-foreground" />
                       </div>
                       <div>
@@ -106,10 +106,10 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="bg-gradient-card shadow-md hover:shadow-orange transition-all duration-300">
+                <Card className="bg-gradient-card shadow-md hover:shadow-blue transition-all duration-300">
                   <CardContent className="p-6">
                     <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-orange">
+                      <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-blue">
                         <MapPin className="w-6 h-6 text-primary-foreground" />
                       </div>
                       <div>
@@ -122,10 +122,10 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="bg-gradient-card shadow-md hover:shadow-orange transition-all duration-300">
+                <Card className="bg-gradient-card shadow-md hover:shadow-blue transition-all duration-300">
                   <CardContent className="p-6">
                     <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-orange">
+                      <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-blue">
                         <Clock className="w-6 h-6 text-primary-foreground" />
                       </div>
                       <div>
@@ -163,7 +163,7 @@ const Contact = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <Card className="bg-gradient-card shadow-md hover:shadow-orange transition-all duration-300 group">
+            <Card className="bg-gradient-card shadow-md hover:shadow-blue transition-all duration-300 group">
               <CardContent className="p-8 text-center">
                 <Phone className="w-12 h-12 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform" />
                 <h3 className="text-xl font-semibold text-foreground mb-4">
@@ -172,7 +172,7 @@ const Contact = () => {
                 <p className="text-muted-foreground mb-6">
                   Καλέστε τώρα και μιλήστε απευθείας με έναν ειδικό μας
                 </p>
-                <Button size="lg" asChild className="shadow-orange">
+                <Button size="lg" asChild className="shadow-blue">
                   <a href="tel:+306907230126">
                     <Phone className="mr-2 w-5 h-5" />
                     +30 6907230126
@@ -181,7 +181,7 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-card shadow-md hover:shadow-orange transition-all duration-300 group">
+            <Card className="bg-gradient-card shadow-md hover:shadow-blue transition-all duration-300 group">
               <CardContent className="p-8 text-center">
                 <Send className="w-12 h-12 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform" />
                 <h3 className="text-xl font-semibold text-foreground mb-4">

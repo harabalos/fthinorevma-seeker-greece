@@ -27,16 +27,16 @@ All colors MUST be HSL.
     --primary-light: 198 57% 95%;
     --primary-dark: 198 57% 45%;
 
-    /* Secondary - Light grays */
-    --secondary: 210 20% 98%;
-    --secondary-foreground: 215 25% 27%;
+    /* Secondary - Navy blue for contrast and depth */
+    --secondary: 220 30% 18%;
+    --secondary-foreground: 0 0% 95%;
 
     /* Muted colors */
     --muted: 210 20% 95%;
     --muted-foreground: 215 15% 50%;
 
     /* Accent colors */
-    --accent: 198 57% 60%;
+    --accent: 220 30% 18%;
     --accent-foreground: 0 0% 100%;
 
     /* Status colors */
@@ -57,7 +57,7 @@ All colors MUST be HSL.
     --glass-border: 198 57% 85% / 0.3;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(198 57% 60%), hsl(205 65% 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(198 57% 60%), hsl(220 30% 18%));
     --gradient-section: linear-gradient(180deg, hsl(0 0% 100%), hsl(198 57% 97%));
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 20% 98%));
 

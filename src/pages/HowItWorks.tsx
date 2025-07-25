@@ -46,7 +46,7 @@ const HowItWorks = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in-up">
             Πώς Λειτουργεί η Follow Up;
           </h1>
-          <p className="text-xl text-orange-100 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+          <p className="text-xl text-white/90 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
             Η διαδικασία αλλαγής παρόχου ρεύματος είναι πιο απλή από όσο νομίζετε. 
             Αναλαμβάνουμε εμείς όλη τη δουλειά για εσάς.
           </p>
@@ -54,71 +54,71 @@ const HowItWorks = () => {
       </section>
 
       {/* Detailed Process Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
               Πώς λειτουργεί η διαδικασία;
             </h2>
             
-            <Card className="border border-gray-100 shadow-lg rounded-xl">
+            <Card className="border shadow-lg rounded-xl">
               <CardContent className="p-12">
-                <p className="text-xl text-gray-700 leading-relaxed mb-8 text-center">
+                <p className="text-xl text-muted-foreground leading-relaxed mb-8 text-center">
                   Η διαδικασία με την Follow Up είναι απλή, ξεκάθαρη και απόλυτα ανθρώπινη:
                 </p>
                 
                 <div className="space-y-8">
                   <div className="flex items-start space-x-6">
-                    <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-lg flex-shrink-0">
                       1
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      <h3 className="text-lg font-semibold text-foreground mb-2">
                         Επικοινωνείς μαζί μας τηλεφωνικά ή μέσω της φόρμας ενδιαφέροντος.
                       </h3>
-                      <p className="text-gray-600 leading-relaxed">
+                      <p className="text-muted-foreground leading-relaxed">
                         Μπορείς να μας καλέσεις οποιαδήποτε στιγμή ή να συμπληρώσεις τη φόρμα στον ιστότοπό μας για να ξεκινήσεις τη διαδικασία.
                       </p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-6">
-                    <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-lg flex-shrink-0">
                       2
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      <h3 className="text-lg font-semibold text-foreground mb-2">
                         Ένας εξειδικευμένος σύμβουλος αναλύει τη σημερινή σου σύμβαση και τις ανάγκες σου.
                       </h3>
-                      <p className="text-gray-600 leading-relaxed">
+                      <p className="text-muted-foreground leading-relaxed">
                         Ο σύμβουλός μας θα εξετάσει τον τρέχοντα λογαριασμό σου και θα κατανοήσει τις συνήθειες κατανάλωσής σου για να βρει την καλύτερη λύση.
                       </p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-6">
-                    <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-lg flex-shrink-0">
                       3
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      <h3 className="text-lg font-semibold text-foreground mb-2">
                         Γίνεται σύγκριση όλων των ενεργών παρόχων και επιλέγεται η βέλτιστη λύση για σένα.
                       </h3>
-                      <p className="text-gray-600 leading-relaxed">
+                      <p className="text-muted-foreground leading-relaxed">
                         Συγκρίνουμε όλες τις διαθέσιμες προσφορές από τους 17+ παρόχους και σου παρουσιάζουμε τις καλύτερες επιλογές με σαφή ανάλυση κόστους.
                       </p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-6">
-                    <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-lg flex-shrink-0">
                       4
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      <h3 className="text-lg font-semibold text-foreground mb-2">
                         Σε καθοδηγούμε στη διαδικασία αλλαγής ή βελτίωσης της σύμβασής σου, χωρίς να χρειαστεί να κάνεις τίποτα.
                       </h3>
-                      <p className="text-gray-600 leading-relaxed">
+                      <p className="text-muted-foreground leading-relaxed">
                         Αναλαμβάνουμε όλες τις διαδικασίες για εσένα - από την υποβολή αιτήσεων μέχρι την επικοινωνία με τους παρόχους. Εσύ απλά περιμένεις να δεις τη μείωση στον επόμενο λογαριασμό σου.
                       </p>
                     </div>
@@ -177,7 +177,7 @@ const HowItWorks = () => {
             </div>
             
             <div className="text-center mt-8">
-              <Button asChild className="shadow-orange">
+              <Button asChild className="shadow-blue">
                 <a href="/faq">
                   Δες όλες τις ερωτήσεις <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
@@ -201,9 +201,9 @@ const HowItWorks = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <Card key={index} className="text-center p-8 bg-gradient-card shadow-md hover:shadow-orange transition-all duration-300">
+              <Card key={index} className="text-center p-8 bg-gradient-card shadow-md hover:shadow-blue transition-all duration-300">
                 <CardContent className="space-y-4">
-                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto shadow-orange">
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto shadow-blue">
                     {benefit.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-foreground">
@@ -226,14 +226,14 @@ const HowItWorks = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white">
               Έτοιμοι να Ξεκινήσετε;
             </h2>
-            <p className="text-xl text-orange-100">
+            <p className="text-xl text-white/90">
               Καλέστε τώρα και ξεκινήστε την εξοικονόμηση σήμερα!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
                 variant="secondary"
-                className="shadow-orange-lg transition-spring hover:scale-105"
+                className="shadow-blue-lg transition-spring hover:scale-105"
                 asChild
               >
                 <a href="/#contact-form">
