@@ -60,14 +60,14 @@ const StatItem = ({ icon, number, suffix = '', label, delay = 0 }: StatItemProps
   return (
     <div 
       ref={ref}
-      className={`text-center p-8 rounded-xl bg-white border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-700 ${
+      className={`text-center p-8 rounded-xl bg-card border-border shadow-blue hover:shadow-lg transition-all duration-700 ${
         isVisible ? 'animate-scale-in' : 'opacity-0'
       }`}
     >
-      <div className="text-5xl font-bold text-orange-500 mb-4">
+      <div className="text-5xl font-bold text-primary mb-4">
         {count.toLocaleString()}{suffix}
       </div>
-      <div className="text-gray-600 font-medium">
+      <div className="text-muted-foreground font-medium">
         {label}
       </div>
     </div>
@@ -76,13 +76,13 @@ const StatItem = ({ icon, number, suffix = '', label, delay = 0 }: StatItemProps
 
 const StatsSection = () => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gradient-section">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Τα <span className="text-orange-500">Αποτελέσματά</span> μας
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Τα <span className="text-primary">Αποτελέσματά</span> μας
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Οι αριθμοί που αποδεικνύουν την αξιοπιστία και την επιτυχία μας
           </p>
         </div>

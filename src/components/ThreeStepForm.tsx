@@ -101,17 +101,17 @@ const ThreeStepForm = () => {
 
   if (isSubmitted) {
     return (
-      <Card className="w-full max-w-lg mx-auto bg-white border border-gray-100 shadow-lg rounded-xl">
+      <Card className="w-full max-w-lg mx-auto bg-card border-border shadow-blue rounded-xl">
         <CardContent className="pt-8 pb-8">
           <div className="text-center space-y-6">
-            <CheckCircle className="w-16 h-16 text-green-500 mx-auto" />
-            <h3 className="text-2xl font-bold text-gray-900">Ευχαριστούμε!</h3>
-            <p className="text-gray-600 text-lg">
+            <CheckCircle className="w-16 h-16 text-success mx-auto" />
+            <h3 className="text-2xl font-bold text-foreground">Ευχαριστούμε!</h3>
+            <p className="text-muted-foreground text-lg">
               Λάβαμε τα στοιχεία σας. Θα σας καλέσουμε εντός 24 ωρών για τη δωρεάν ανάλυση.
             </p>
-            <div className="flex items-center justify-center space-x-2 text-orange-500 text-xl font-semibold">
+            <div className="flex items-center justify-center space-x-2 text-primary text-xl font-semibold">
               <Phone className="w-6 h-6" />
-              <span>211.1985.861</span>
+              <span>+30 6907230126</span>
             </div>
           </div>
         </CardContent>
@@ -120,11 +120,11 @@ const ThreeStepForm = () => {
   }
 
   return (
-    <Card className="w-full max-w-lg mx-auto bg-white border border-gray-100 shadow-lg rounded-xl overflow-hidden">
-      <CardHeader className="bg-gray-50 border-b border-gray-100 pb-6">
+    <Card className="w-full max-w-lg mx-auto bg-card border-border shadow-blue rounded-xl overflow-hidden">
+      <CardHeader className="bg-muted border-b border-border pb-6">
         <div className="text-center space-y-4">
-          <h3 className="text-xl font-bold text-gray-900">Λάβε δωρεάν προσφορές</h3>
-          <p className="text-gray-600">Συμπλήρωσε τα στοιχεία σου και θα σου στείλουμε τις καλύτερες προσφορές</p>
+          <h3 className="text-xl font-bold text-foreground">Λάβε δωρεάν προσφορές</h3>
+          <p className="text-muted-foreground">Συμπλήρωσε τα στοιχεία σου και θα σου στείλουμε τις καλύτερες προσφορές</p>
           
           {/* Progress Steps */}
           <div className="flex items-center justify-center space-x-4">
@@ -132,14 +132,14 @@ const ThreeStepForm = () => {
               <div key={step} className="flex items-center">
                 <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold ${
                   currentStep >= step 
-                    ? 'bg-orange-500 text-white' 
-                    : 'bg-gray-200 text-gray-500'
+                    ? 'bg-primary text-primary-foreground' 
+                    : 'bg-muted-foreground/20 text-muted-foreground'
                 }`}>
                   {step}
                 </div>
                 {step < 3 && (
                   <div className={`w-8 h-0.5 ${
-                    currentStep > step ? 'bg-orange-500' : 'bg-gray-200'
+                    currentStep > step ? 'bg-primary' : 'bg-muted-foreground/20'
                   }`} />
                 )}
               </div>
@@ -152,16 +152,16 @@ const ThreeStepForm = () => {
         {currentStep === 1 && (
           <div className="space-y-6">
             <div className="text-center">
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Ρύθμιση Παροχής</h4>
+              <h4 className="text-lg font-semibold text-foreground mb-2">Ρύθμιση Παροχής</h4>
             </div>
             
             <div className="space-y-4">
               <div>
-                <Label className="text-gray-700 font-medium block mb-2">
+                <Label className="text-foreground font-medium block mb-2">
                   Σε ποιον πάροχο ανήκετε;
                 </Label>
                 <Select onValueChange={(value) => updateFormData('currentProvider', value)}>
-                  <SelectTrigger className="h-12 border-gray-200 rounded-lg">
+                  <SelectTrigger className="h-12 border-input rounded-lg">
                     <SelectValue placeholder="Επιλέξτε πάροχο" />
                   </SelectTrigger>
                   <SelectContent>
@@ -175,11 +175,11 @@ const ThreeStepForm = () => {
               </div>
               
               <div>
-                <Label className="text-gray-700 font-medium block mb-2">
+                <Label className="text-foreground font-medium block mb-2">
                   Ποια είναι η μηνιαία κατανάλωσή σας;
                 </Label>
                 <Select onValueChange={(value) => updateFormData('monthlyConsumption', value)}>
-                  <SelectTrigger className="h-12 border-gray-200 rounded-lg">
+                  <SelectTrigger className="h-12 border-input rounded-lg">
                     <SelectValue placeholder="Επιλέξτε κατανάλωση" />
                   </SelectTrigger>
                   <SelectContent>
@@ -195,7 +195,7 @@ const ThreeStepForm = () => {
             
             <Button 
               onClick={handleNext}
-              className="w-full bg-orange-500 hover:bg-orange-600 text-white h-12 rounded-lg font-medium"
+              className="w-full h-12 rounded-lg font-medium"
             >
               Επόμενο
               <ChevronRight className="ml-2 w-4 h-4" />
@@ -206,12 +206,12 @@ const ThreeStepForm = () => {
         {currentStep === 2 && (
           <div className="space-y-6">
             <div className="text-center">
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Επικοινωνία</h4>
+              <h4 className="text-lg font-semibold text-foreground mb-2">Επικοινωνία</h4>
             </div>
             
             <div className="space-y-4">
               <div>
-                <Label htmlFor="firstName" className="text-gray-700 font-medium block mb-2">
+                <Label htmlFor="firstName" className="text-foreground font-medium block mb-2">
                   Όνομα
                 </Label>
                 <Input
@@ -220,12 +220,12 @@ const ThreeStepForm = () => {
                   value={formData.firstName}
                   onChange={(e) => updateFormData('firstName', e.target.value)}
                   placeholder="Το όνομά σας"
-                  className="h-12 border-gray-200 rounded-lg"
+                  className="h-12 border-input rounded-lg"
                 />
               </div>
               
               <div>
-                <Label htmlFor="email" className="text-gray-700 font-medium block mb-2">
+                <Label htmlFor="email" className="text-foreground font-medium block mb-2">
                   Email
                 </Label>
                 <Input
@@ -234,12 +234,12 @@ const ThreeStepForm = () => {
                   value={formData.email}
                   onChange={(e) => updateFormData('email', e.target.value)}
                   placeholder="email@example.com"
-                  className="h-12 border-gray-200 rounded-lg"
+                  className="h-12 border-input rounded-lg"
                 />
               </div>
               
               <div>
-                <Label htmlFor="phone" className="text-gray-700 font-medium block mb-2">
+                <Label htmlFor="phone" className="text-foreground font-medium block mb-2">
                   Τηλέφωνο
                 </Label>
                 <Input
@@ -248,7 +248,7 @@ const ThreeStepForm = () => {
                   value={formData.phone}
                   onChange={(e) => updateFormData('phone', e.target.value)}
                   placeholder="210 123 4567"
-                  className="h-12 border-gray-200 rounded-lg"
+                  className="h-12 border-input rounded-lg"
                 />
               </div>
               
@@ -259,7 +259,7 @@ const ThreeStepForm = () => {
                   onCheckedChange={(checked) => updateFormData('agreeToTerms', checked)}
                   className="mt-1"
                 />
-                <Label htmlFor="terms" className="text-sm text-gray-600 leading-relaxed">
+                <Label htmlFor="terms" className="text-sm text-muted-foreground leading-relaxed">
                   Έχω διαβάσει και αποδέχομαι τους Όρους χρήσης και προστασίας προσωπικών δεδομένων
                 </Label>
               </div>
@@ -269,14 +269,14 @@ const ThreeStepForm = () => {
               <Button 
                 onClick={handlePrevious}
                 variant="outline"
-                className="flex-1 h-12 rounded-lg border-teal-500 text-teal-600 hover:bg-teal-50"
+                className="flex-1 h-12 rounded-lg"
               >
                 <ChevronLeft className="mr-2 w-4 h-4" />
                 Προηγούμενο
               </Button>
               <Button 
                 onClick={handleNext}
-                className="flex-1 bg-orange-500 hover:bg-orange-600 text-white h-12 rounded-lg"
+                className="flex-1 h-12 rounded-lg"
               >
                 Επόμενο
                 <ChevronRight className="ml-2 w-4 h-4" />
@@ -288,12 +288,12 @@ const ThreeStepForm = () => {
         {currentStep === 3 && (
           <div className="space-y-6">
             <div className="text-center">
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Επιβεβαίωση</h4>
+              <h4 className="text-lg font-semibold text-foreground mb-2">Επιβεβαίωση</h4>
             </div>
             
             <div className="space-y-4">
               <div>
-                <Label htmlFor="billFile" className="text-gray-700 font-medium block mb-2">
+                <Label htmlFor="billFile" className="text-foreground font-medium block mb-2">
                   Ανέβασε φωτογραφία του τελευταίου λογαριασμού (προαιρετικό)
                 </Label>
                 <Input
@@ -301,16 +301,16 @@ const ThreeStepForm = () => {
                   type="file"
                   onChange={(e) => updateFormData('billFile', e.target.files?.[0] || null)}
                   accept=".pdf,.jpg,.jpeg,.png"
-                  className="h-12 border-gray-200 rounded-lg file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-medium file:bg-orange-500 file:text-white cursor-pointer"
+                  className="h-12 border-input rounded-lg file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-medium file:bg-primary file:text-primary-foreground cursor-pointer"
                 />
               </div>
               
               <div>
-                <Label className="text-gray-700 font-medium block mb-2">
+                <Label className="text-foreground font-medium block mb-2">
                   Τιμολόγιο
                 </Label>
                 <Select onValueChange={(value) => updateFormData('tariffType', value)}>
-                  <SelectTrigger className="h-12 border-gray-200 rounded-lg">
+                  <SelectTrigger className="h-12 border-input rounded-lg">
                     <SelectValue placeholder="Επιλέξτε τύπο τιμολογίου" />
                   </SelectTrigger>
                   <SelectContent>
@@ -325,14 +325,14 @@ const ThreeStepForm = () => {
               <Button 
                 onClick={handlePrevious}
                 variant="outline"
-                className="flex-1 h-12 rounded-lg border-teal-500 text-teal-600 hover:bg-teal-50"
+                className="flex-1 h-12 rounded-lg"
               >
                 <ChevronLeft className="mr-2 w-4 h-4" />
                 Προηγούμενο
               </Button>
               <Button 
                 onClick={handleSubmit}
-                className="flex-1 bg-orange-500 hover:bg-orange-600 text-white h-12 rounded-lg font-medium"
+                className="flex-1 h-12 rounded-lg font-medium"
               >
                 Αποστολή
               </Button>
