@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 /* Follow Up Design System - Modern electricity comparison service
-Primary: Orange accents for energy and trust
-Background: Clean white for professionalism
+Primary: Sky Blue from logo for trust and professionalism
+Background: Clean white for clarity
 All colors MUST be HSL.
 */
 
@@ -12,31 +12,31 @@ All colors MUST be HSL.
   :root {
     /* Base colors - Clean white background */
     --background: 0 0% 100%;
-    --foreground: 220 9% 15%;
+    --foreground: 215 25% 27%;
 
     /* Card and surface colors */
     --card: 0 0% 100%;
-    --card-foreground: 220 9% 15%;
+    --card-foreground: 215 25% 27%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 9% 15%;
+    --popover-foreground: 215 25% 27%;
 
-    /* Primary - Vibrant Orange theme (#F56600) */
-    --primary: 21 100% 48%;
+    /* Primary - Sky Blue from logo (#5BA6D9) */
+    --primary: 198 57% 60%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 21 100% 96%;
-    --primary-dark: 21 100% 38%;
+    --primary-light: 198 57% 95%;
+    --primary-dark: 198 57% 45%;
 
-    /* Secondary - Neutral grays */
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 220 9% 15%;
+    /* Secondary - Light grays */
+    --secondary: 210 20% 98%;
+    --secondary-foreground: 215 25% 27%;
 
     /* Muted colors */
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 9% 46%;
+    --muted: 210 20% 95%;
+    --muted-foreground: 215 15% 50%;
 
     /* Accent colors */
-    --accent: 21 100% 48%;
+    --accent: 198 57% 60%;
     --accent-foreground: 0 0% 100%;
 
     /* Status colors */
@@ -46,26 +46,26 @@ All colors MUST be HSL.
     --success-foreground: 0 0% 100%;
 
     /* Border and input */
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 21 100% 48%;
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 198 57% 60%;
 
     --radius: 0.75rem;
 
     /* Glass effect colors */
-    --glass-bg: 0 0% 100% / 0.8;
-    --glass-border: 220 13% 91% / 0.5;
+    --glass-bg: 0 0% 100% / 0.85;
+    --glass-border: 198 57% 85% / 0.3;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(21 100% 48%), hsl(24 100% 55%));
-    --gradient-section: linear-gradient(180deg, hsl(0 0% 100%), hsl(21 100% 98%));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 14% 98%));
+    --gradient-hero: linear-gradient(135deg, hsl(198 57% 60%), hsl(205 65% 70%));
+    --gradient-section: linear-gradient(180deg, hsl(0 0% 100%), hsl(198 57% 97%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 20% 98%));
 
     /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(220 13% 91% / 0.5);
-    --shadow-md: 0 4px 6px -1px hsl(220 13% 91% / 0.5);
-    --shadow-lg: 0 10px 15px -3px hsl(220 13% 91% / 0.3);
-    --shadow-orange: 0 4px 20px hsl(21 100% 48% / 0.15);
+    --shadow-sm: 0 1px 2px 0 hsl(210 20% 90% / 0.5);
+    --shadow-md: 0 4px 6px -1px hsl(210 20% 85% / 0.4);
+    --shadow-lg: 0 10px 15px -3px hsl(210 20% 80% / 0.3);
+    --shadow-blue: 0 4px 20px hsl(198 57% 60% / 0.15);
 
     /* Animation */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -82,18 +82,18 @@ All colors MUST be HSL.
     --popover: 220 15% 10%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 24 100% 55%;
+    --primary: 198 57% 65%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 30 100% 15%;
-    --primary-dark: 20 100% 45%;
+    --primary-light: 198 57% 15%;
+    --primary-dark: 198 57% 45%;
 
-    --secondary: 220 15% 15%;
+    --secondary: 215 25% 15%;
     --secondary-foreground: 0 0% 95%;
 
-    --muted: 220 15% 15%;
-    --muted-foreground: 220 9% 65%;
+    --muted: 215 20% 20%;
+    --muted-foreground: 215 15% 65%;
 
-    --accent: 24 100% 55%;
+    --accent: 198 57% 65%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 65%;
@@ -101,21 +101,21 @@ All colors MUST be HSL.
     --success: 142 76% 40%;
     --success-foreground: 0 0% 100%;
 
-    --border: 220 15% 20%;
-    --input: 220 15% 20%;
-    --ring: 24 100% 55%;
+    --border: 215 20% 25%;
+    --input: 215 20% 25%;
+    --ring: 198 57% 65%;
 
-    --glass-bg: 220 15% 10% / 0.8;
-    --glass-border: 220 15% 25% / 0.5;
+    --glass-bg: 215 25% 10% / 0.8;
+    --glass-border: 198 57% 35% / 0.3;
 
-    --gradient-hero: linear-gradient(135deg, hsl(24 100% 55%), hsl(30 100% 65%));
-    --gradient-section: linear-gradient(180deg, hsl(220 15% 8%), hsl(220 15% 12%));
-    --gradient-card: linear-gradient(145deg, hsl(220 15% 10%), hsl(220 15% 15%));
+    --gradient-hero: linear-gradient(135deg, hsl(198 57% 65%), hsl(205 65% 75%));
+    --gradient-section: linear-gradient(180deg, hsl(215 25% 8%), hsl(215 25% 12%));
+    --gradient-card: linear-gradient(145deg, hsl(215 25% 10%), hsl(215 25% 15%));
 
-    --shadow-sm: 0 1px 2px 0 hsl(220 15% 5% / 0.5);
-    --shadow-md: 0 4px 6px -1px hsl(220 15% 5% / 0.5);
-    --shadow-lg: 0 10px 15px -3px hsl(220 15% 5% / 0.3);
-    --shadow-orange: 0 4px 20px hsl(24 100% 55% / 0.25);
+    --shadow-sm: 0 1px 2px 0 hsl(215 25% 5% / 0.5);
+    --shadow-md: 0 4px 6px -1px hsl(215 25% 5% / 0.5);
+    --shadow-lg: 0 10px 15px -3px hsl(215 25% 5% / 0.3);
+    --shadow-blue: 0 4px 20px hsl(198 57% 65% / 0.25);
   }
 }
 
@@ -152,9 +152,9 @@ All colors MUST be HSL.
     background: var(--gradient-card);
   }
 
-  /* Orange shadows */
-  .shadow-orange {
-    box-shadow: var(--shadow-orange);
+  /* Blue shadows */
+  .shadow-blue {
+    box-shadow: var(--shadow-blue);
   }
 
   /* Smooth transitions */

@@ -112,8 +112,8 @@ export default {
 				sans: ['Inter', 'system-ui', 'sans-serif']
 			},
 			boxShadow: {
-				'orange': '0 4px 20px hsl(var(--primary) / 0.15)',
-				'orange-lg': '0 10px 40px hsl(var(--primary) / 0.2)'
+				'blue': '0 4px 20px hsl(var(--primary) / 0.15)',
+				'blue-lg': '0 10px 40px hsl(var(--primary) / 0.2)'
 			}
 		}
 	},
