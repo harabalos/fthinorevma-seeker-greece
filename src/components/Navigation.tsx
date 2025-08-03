@@ -106,7 +106,7 @@ const Navigation = () => {
                   <span className="font-medium">210265051</span>
                 </a>
                 <Button asChild className="w-full" variant="outline" onClick={() => setIsOpen(false)}>
-                  <Link to="/contact" className="border-white text-white hover:bg-dark-blue hover:border-dark-blue">
+                  <Link to="/contact" className="border-white text-primary bg-white hover:bg-white/90 hover:border-white">
                     Δωρεάν Ανάλυση
                   </Link>
                 </Button>
