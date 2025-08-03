@@ -111,7 +111,7 @@ const ThreeStepForm = () => {
             </p>
             <div className="flex items-center justify-center space-x-2 text-primary text-xl font-semibold">
               <Phone className="w-6 h-6" />
-              <span>+30 6907230126</span>
+              <span>210265051</span>
             </div>
           </div>
         </CardContent>

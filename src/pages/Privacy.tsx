@@ -110,8 +110,8 @@ const Privacy = () => {
               <div className="space-y-4 text-gray-700">
                 <p>Για οποιοδήποτε αίτημα σχετικά με τα προσωπικά σας δεδομένα, μπορείτε να επικοινωνήσετε μαζί μας στο:</p>
                 <div className="space-y-2">
-                  <p>📧 <strong>Email:</strong> info@followup.gr</p>
-                  <p>📞 <strong>Τηλέφωνο:</strong> +30 6907230126</p>
+                  <p>📧 <strong>Email:</strong> info@followupnet.gr</p>
+                  <p>📞 <strong>Τηλέφωνο:</strong> 210265051</p>
                 </div>
               </div>
             </Card>

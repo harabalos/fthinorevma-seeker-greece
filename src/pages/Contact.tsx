@@ -12,7 +12,7 @@ const Contact = () => {
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Επικοινωνήστε με τη Follow Up για δωρεάν ανάλυση του λογαριασμού ρεύματος. Τηλέφωνο: +30 6907230126. Εξυπηρέτηση Δευτέρα-Παρασκευή 9:00-18:00.');
+      metaDescription.setAttribute('content', 'Επικοινωνήστε με τη Follow Up για δωρεάν ανάλυση του λογαριασμού ρεύματος. Τηλέφωνο: 210265051. Εξυπηρέτηση Δευτέρα-Παρασκευή 09:00-17:00.');
     }
   }, []);
 
@@ -77,10 +77,10 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold text-foreground">Τηλέφωνο</h3>
                         <a 
-                          href="tel:+306907230126" 
+                          href="tel:210265051" 
                           className="text-primary hover:text-primary-dark transition-colors text-lg font-medium"
                         >
-                          +30 6907230126
+                          210265051
                         </a>
                       </div>
                     </div>
@@ -96,10 +96,10 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold text-foreground">Email</h3>
                         <a 
-                          href="mailto:info@followup.gr" 
+                          href="mailto:info@followupnet.gr" 
                           className="text-primary hover:text-primary-dark transition-colors"
                         >
-                          info@followup.gr
+                          info@followupnet.gr
                         </a>
                       </div>
                     </div>
@@ -131,9 +131,7 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold text-foreground">Ώρες Εξυπηρέτησης</h3>
                         <div className="text-muted-foreground">
-                          <p>Δευτέρα - Παρασκευή: 9:00 - 18:00</p>
-                          <p>Σάββατο: 10:00 - 15:00</p>
-                          <p>Κυριακή: Κλειστά</p>
+                          <p>Δευτέρα - Παρασκευή, 09:00 – 17:00</p>
                         </div>
                       </div>
                     </div>
@@ -173,9 +171,9 @@ const Contact = () => {
                   Καλέστε τώρα και μιλήστε απευθείας με έναν ειδικό μας
                 </p>
                 <Button size="lg" asChild className="shadow-blue">
-                  <a href="tel:+306907230126">
+                  <a href="tel:210265051">
                     <Phone className="mr-2 w-5 h-5" />
-                    +30 6907230126
+                    210265051
                   </a>
                 </Button>
               </CardContent>

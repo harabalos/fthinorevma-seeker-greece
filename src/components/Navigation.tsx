@@ -59,11 +59,11 @@ const Navigation = () => {
           {/* Phone & CTA */}
           <div className="hidden md:flex items-center space-x-4">
             <a 
-              href="tel:+306907230126" 
+              href="tel:210265051" 
               className="flex items-center space-x-2 text-white hover:text-white/80 transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span className="font-medium">+30 6907230126</span>
+              <span className="font-medium">210265051</span>
             </a>
             <Button asChild size="sm" variant="outline" className="border-white text-primary hover:bg-dark-blue hover:border-dark-blue hover:text-white">
               <Link to="/contact">Δωρεάν Ανάλυση</Link>
@@ -99,11 +99,11 @@ const Navigation = () => {
               ))}
               <div className="px-4 pt-4 border-t border-white/20">
                 <a 
-                  href="tel:+306907230126" 
+                  href="tel:210265051" 
                   className="flex items-center space-x-2 text-white hover:text-white/80 transition-colors mb-3"
                 >
                   <Phone className="w-4 h-4" />
-                  <span className="font-medium">+30 6907230126</span>
+                  <span className="font-medium">210265051</span>
                 </a>
                 <Button asChild className="w-full" variant="outline" onClick={() => setIsOpen(false)}>
                   <Link to="/contact" className="border-white text-white hover:bg-dark-blue hover:border-dark-blue">

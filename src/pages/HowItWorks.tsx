@@ -246,9 +246,9 @@ const HowItWorks = () => {
                 className="bg-white/20 border-white/30 text-white hover:bg-white/30"
                 asChild
               >
-                <a href="tel:+306907230126">
+                <a href="tel:210265051">
                   <Phone className="mr-2 w-5 h-5" />
-                  +30 6907230126
+                  210265051
                 </a>
               </Button>
             </div>
