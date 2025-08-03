@@ -1,52 +1,38 @@
-
 import { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { 
-  Phone, 
-  Euro, 
-  Clock,
-  ArrowRight,
-  Shield
-} from 'lucide-react';
-
+import { Phone, Euro, Clock, ArrowRight, Shield } from 'lucide-react';
 const HowItWorks = () => {
   useEffect(() => {
     document.title = 'Πώς Λειτουργεί η Αλλαγή Παρόχου Ρεύματος | Follow Up';
-    
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Μάθετε πώς λειτουργεί η διαδικασία αλλαγής παρόχου ρεύματος. Απλά 3 βήματα για να εξοικονομήσετε στον λογαριασμό σας χωρίς διακοπή ρεύματος.');
     }
   }, []);
-
-  const benefits = [
-    {
-      icon: <Euro className="w-8 h-8 text-primary-foreground" />,
-      title: "Εξοικονόμηση έως 40%",
-      description: "Στον μηνιαίο λογαριασμό ρεύματος"
-    },
-    {
-      icon: <Clock className="w-8 h-8 text-primary-foreground" />,
-      title: "Χωρίς διακοπή ρεύματος",
-      description: "Η αλλαγή γίνεται αυτόματα"
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-primary-foreground" />,
-      title: "Δωρεάν υπηρεσία",
-      description: "Χωρίς κρυφά κόστη ή χρεώσεις"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen">
+  const benefits = [{
+    icon: <Euro className="w-8 h-8 text-primary-foreground" />,
+    title: "Εξοικονόμηση έως 40%",
+    description: "Στον μηνιαίο λογαριασμό ρεύματος"
+  }, {
+    icon: <Clock className="w-8 h-8 text-primary-foreground" />,
+    title: "Χωρίς διακοπή ρεύματος",
+    description: "Η αλλαγή γίνεται αυτόματα"
+  }, {
+    icon: <Shield className="w-8 h-8 text-primary-foreground" />,
+    title: "Δωρεάν υπηρεσία",
+    description: "Χωρίς κρυφά κόστη ή χρεώσεις"
+  }];
+  return <div className="min-h-screen">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-hero">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in-up">
             Πώς Λειτουργεί η Follow Up;
           </h1>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+          <p className="text-xl text-white/90 max-w-3xl mx-auto animate-fade-in-up" style={{
+          animationDelay: '0.1s'
+        }}>
             Η διαδικασία αλλαγής παρόχου ρεύματος είναι πιο απλή από όσο νομίζετε. 
             Αναλαμβάνουμε εμείς όλη τη δουλειά για εσάς.
           </p>
@@ -144,10 +130,7 @@ const HowItWorks = () => {
                   <h3 className="font-semibold text-foreground mb-2">
                     Πόσο διαρκεί η διαδικασία αλλαγής;
                   </h3>
-                  <p className="text-muted-foreground">
-                    Η διαδικασία ολοκληρώνεται συνήθως σε 15-30 ημέρες από την υποβολή της αίτησης. 
-                    Δεν χρειάζεται να κάνετε τίποτα εσείς - αναλαμβάνουμε όλες τις διαδικασίες.
-                  </p>
+                  <p className="text-muted-foreground">Η διαδικασία ολοκληρώνεται συνήθως σε 5-20 ημέρες από την υποβολή της αίτησης. Ο χρόνος εξαρτάται από τον τρέχοντα και τον νέο πάροχο. Θα σας ενημερώνουμε για την πρόοδο σε κάθε στάδιο.</p>
                 </CardContent>
               </Card>
 
@@ -200,8 +183,7 @@ const HowItWorks = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <Card key={index} className="text-center p-8 bg-gradient-card shadow-md hover:shadow-blue transition-all duration-300">
+            {benefits.map((benefit, index) => <Card key={index} className="text-center p-8 bg-gradient-card shadow-md hover:shadow-blue transition-all duration-300">
                 <CardContent className="space-y-4">
                   <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto shadow-blue">
                     {benefit.icon}
@@ -213,8 +195,7 @@ const HowItWorks = () => {
                     {benefit.description}
                   </p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -230,22 +211,12 @@ const HowItWorks = () => {
               Καλέστε τώρα και ξεκινήστε την εξοικονόμηση σήμερα!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                variant="secondary"
-                className="shadow-blue-lg transition-spring hover:scale-105"
-                asChild
-              >
+              <Button size="lg" variant="secondary" className="shadow-blue-lg transition-spring hover:scale-105" asChild>
                 <a href="/#contact-form">
                   Δωρεάν Ανάλυση <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="bg-white/20 border-white/30 text-white hover:bg-white/30"
-                asChild
-              >
+              <Button size="lg" variant="outline" className="bg-white/20 border-white/30 text-white hover:bg-white/30" asChild>
                 <a href="tel:210265051">
                   <Phone className="mr-2 w-5 h-5" />
                   210265051
@@ -255,8 +226,6 @@ const HowItWorks = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default HowItWorks;
