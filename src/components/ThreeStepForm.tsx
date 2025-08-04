@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -10,6 +11,7 @@ import { useToast } from '@/hooks/use-toast';
 
 const ThreeStepForm = () => {
   const { toast } = useToast();
+  const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
@@ -76,7 +78,7 @@ const ThreeStepForm = () => {
     setCurrentStep(currentStep - 1);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!formData.tariffType) {
       toast({
         title: "Επιλέξτε τύπο τιμολογίου",
@@ -86,13 +88,39 @@ const ThreeStepForm = () => {
       return;
     }
 
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
-    
-    toast({
-      title: 'Επιτυχής Αποστολή!',
-      description: 'Θα σας καλέσουμε εντός 24 ωρών για δωρεάν ανάλυση.',
-    });
+    try {
+      const formDataToSend = new FormData();
+      formDataToSend.append('currentProvider', formData.currentProvider);
+      formDataToSend.append('monthlyConsumption', formData.monthlyConsumption);
+      formDataToSend.append('firstName', formData.firstName);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('phone', formData.phone);
+      formDataToSend.append('tariffType', formData.tariffType);
+      
+      if (formData.billFile) {
+        formDataToSend.append('billFile', formData.billFile);
+      }
+
+      const response = await fetch('https://formspree.io/f/xeozlbwl', {
+        method: 'POST',
+        body: formDataToSend,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        navigate('/thank-you');
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      toast({
+        title: "Σφάλμα αποστολής",
+        description: "Δοκιμάστε ξανά σε λίγο",
+        variant: "destructive"
+      });
+    }
   };
 
   const updateFormData = (field: string, value: any) => {
