@@ -161,9 +161,9 @@ const FAQ = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" asChild className="shadow-orange">
-                  <a href="tel:210265051">
+                  <a href="tel:2102650511">
                     <Phone className="mr-2 w-5 h-5" />
-                    Καλέστε: 210265051
+                    Καλέστε: 2102650511
                   </a>
                 </Button>
                 <Button size="lg" variant="outline" asChild>

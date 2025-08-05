@@ -217,9 +217,9 @@ const HowItWorks = () => {
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="bg-white/20 border-white/30 text-white hover:bg-white/30" asChild>
-                <a href="tel:210265051">
+                <a href="tel:2102650511">
                   <Phone className="mr-2 w-5 h-5" />
-                  210265051
+                  2102650511
                 </a>
               </Button>
             </div>

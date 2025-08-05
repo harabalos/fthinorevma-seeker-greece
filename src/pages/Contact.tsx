@@ -12,7 +12,7 @@ const Contact = () => {
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Επικοινωνήστε με τη Follow Up για δωρεάν ανάλυση του λογαριασμού ρεύματος. Τηλέφωνο: 210265051. Εξυπηρέτηση Δευτέρα-Παρασκευή 09:00-17:00.');
+      metaDescription.setAttribute('content', 'Επικοινωνήστε με τη Follow Up για δωρεάν ανάλυση του λογαριασμού ρεύματος. Τηλέφωνο: 2102650511. Εξυπηρέτηση Δευτέρα-Παρασκευή 09:00-17:00.');
     }
   }, []);
 
@@ -77,10 +77,10 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold text-foreground">Τηλέφωνο</h3>
                         <a 
-                          href="tel:210265051" 
+                          href="tel:2102650511" 
                           className="text-primary hover:text-primary-dark transition-colors text-lg font-medium"
                         >
-                          210265051
+                          2102650511
                         </a>
                       </div>
                     </div>
@@ -171,9 +171,9 @@ const Contact = () => {
                   Καλέστε τώρα και μιλήστε απευθείας με έναν ειδικό μας
                 </p>
                 <Button size="lg" asChild className="shadow-blue">
-                  <a href="tel:210265051">
+                  <a href="tel:2102650511">
                     <Phone className="mr-2 w-5 h-5" />
-                    210265051
+                    2102650511
                   </a>
                 </Button>
               </CardContent>
