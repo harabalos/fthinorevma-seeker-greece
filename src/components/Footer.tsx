@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <Link to="/" className="flex items-center space-x-3 mb-4">
               <img 
-                src="/lovable-uploads/5262cfb7-4205-416c-8379-554d64c12492.png" 
+                src="/assets/5262cfb7-4205-416c-8379-554d64c12492.png" 
                 alt="Follow Up" 
                 className="w-10 h-10 object-contain"
               />

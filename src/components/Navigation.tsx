@@ -30,7 +30,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <img 
-              src="/lovable-uploads/9a52fe6d-aa1e-40d7-913d-071a61dab65b.png" 
+              src="/assets/9a52fe6d-aa1e-40d7-913d-071a61dab65b.png" 
               alt="Follow Up" 
               className="w-10 h-10 object-contain"
             />
